@@ -8,11 +8,12 @@
     top: 0;
     justify-content: space-between;
     width: 100%;
-
+    z-index: 1;
 }
 
 .headerContainer h3 {
-    color: black;
+    color: #a05262;
+    cursor: pointer;
 }
 
 .headerContainer ul {
@@ -21,11 +22,15 @@
 }
 
 .headerContainer li {
-    color: black;
+    color: #a05262;
     list-style-type: none;
     cursor: pointer;
 }
 
+.headerContainer li:hover {
+    color: #9c747c;
+}
+
 .headerContainer.scrolled {
-    background-color: white;
+    background-color: rgb(255 255 255 / 55%);
 }

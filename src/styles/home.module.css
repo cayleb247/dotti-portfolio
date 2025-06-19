@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.landingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffebeb;
+}
+
+.profilePicture {
+    border-radius: 10rem;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profileSubtext, .profileHandles {
+    display: flex;
+    gap: 1rem;
+}
+
+.profileHandles h3 {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.profileHandles h3:hover {
+    text-decoration: underline;
+}
+
+.profileHandles a {
+    text-decoration: none;
+    color: #a05262;
+}
+
+.selectedWorksContainer {
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebc7c7;
+    color: #a05262;
+}
+
+.selectedWorks {
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.selectedWorksColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.selectedWork {
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: white;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.selectedWork:hover {
+    transform: translate(0, -0.5rem);
+}
+
+.galleryButton {
+    font-size: 1.25rem;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+    padding: none;
+    color: #a05262;
+    font-weight: 550;
+}
+
+.galleryButton:hover {
+    text-decoration: underline;
+}
