@@ -1,0 +1,31 @@
+.headerContainer {
+    display: flex;
+    color: black;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.headerContainer h3 {
+    color: black;
+}
+
+.headerContainer ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.headerContainer li {
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.headerContainer.scrolled {
+    background-color: white;
+}
