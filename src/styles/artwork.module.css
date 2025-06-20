@@ -1,0 +1,22 @@
+.artwork {
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: white;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.artwork:hover {
+    transform: translate(0, -0.5rem);
+}
