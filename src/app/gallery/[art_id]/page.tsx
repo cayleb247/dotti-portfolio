@@ -2,15 +2,15 @@ import Artwork from "@/components/Artwork";
 import styles from "@/styles/art-page.module.css";
 import artDataMap from "./artData";
 
-export default function ArtPage({ params }: { params: { art_id: string } }) {
-  const { art_id } = params;
+export default async function ArtPage({ params }: { params: Promise<{ art_id: string }> }) {
+  const { art_id } = await params;
   if (artDataMap.has(art_id)) {
     const artData = artDataMap.get(art_id)
     return (
       <main>
         <div className={styles.artPageContainer}>
           <div className={styles.artworkContainer}>
-            <Artwork art_id={art_id} profile ></Artwork>
+            <Artwork art_id={art_id} profile={true} ></Artwork>
             <div className={styles.artworkBorder}></div>
           </div>
           <div className={styles.artDescContainer}>
