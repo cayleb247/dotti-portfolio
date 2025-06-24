@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "@/styles/footer.module.css";
-import clsx from "clsx";
 
 export default function Header() {
   return (

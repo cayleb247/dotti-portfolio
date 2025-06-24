@@ -10,7 +10,8 @@ export default function ArtPage({ params }: { params: { art_id: string } }) {
       <main>
         <div className={styles.artPageContainer}>
           <div className={styles.artworkContainer}>
-            <Artwork art_id={art_id}></Artwork>
+            <Artwork art_id={art_id} profile ></Artwork>
+            <div className={styles.artworkBorder}></div>
           </div>
           <div className={styles.artDescContainer}>
             <h1>{artData.title}</h1>

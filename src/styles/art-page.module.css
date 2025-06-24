@@ -16,12 +16,22 @@
 }
 
 .artworkContainer {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     display: flex;
     grid-column: 0 1;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.artworkBorder {
+    height: 33%;
+    position: absolute;
+    right: 0;
+    width: 0.125rem;
+    background-color: #a0526282;
 }
 
 .artDescContainer {
@@ -36,3 +46,10 @@
     align-items: flex-start;
 }
 
+.artDescContainer h1 {
+    font-size: 2.5rem;
+}
+
+.artDescContainer p {
+    margin-top: 0.5rem;
+}
