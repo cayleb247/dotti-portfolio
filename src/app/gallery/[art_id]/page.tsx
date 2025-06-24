@@ -1,30 +1,34 @@
 import Artwork from "@/components/Artwork";
-
-const artIDList = [
-  "charcoal_pastel_pencil_still",
-  "charcoal_skull_bones",
-  "color_pencil_marble",
-  "cutest_pup",
-  "figure_drawing",
-  "graphite_charcoal_mixed_fore",
-  "graphite_shoes",
-  "mentos",
-  "open_wrapped",
-  "self_portrait",
-];
+import styles from "@/styles/art-page.module.css";
+import artDataMap from "./artData";
 
 export default function ArtPage({ params }: { params: { art_id: string } }) {
   const { art_id } = params;
-  if (artIDList.includes(art_id)) {
+  if (artDataMap.has(art_id)) {
+    const artData = artDataMap.get(art_id)
     return (
-        <main>
-            <h1>Art found! {art_id}</h1>
+      <main>
+        <div className={styles.artPageContainer}>
+          <div className={styles.artworkContainer}>
             <Artwork art_id={art_id}></Artwork>
-        </main>
+          </div>
+          <div className={styles.artDescContainer}>
+            <h1>{artData.title}</h1>
+            <h3>{artData.year}</h3>
+            <p>{artData.description}</p>
+          </div>
+        </div>
+      </main>
     );
   } else {
     return (
-        <h1>Artwork not found</h1>
-    )
+      <div className={styles.notFoundContainer}>
+        <div className={styles.notFoundMessage}>
+          <h1>Uh Oh...</h1>
+          <h1>Artwork not found!</h1>
+          <p>perhaps it was mispelled?</p>
+        </div>
+      </div>
+    );
   }
 }

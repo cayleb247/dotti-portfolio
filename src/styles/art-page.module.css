@@ -1,0 +1,38 @@
+.notFoundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBC7C7;
+}
+
+.artPageContainer {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBC7C7;
+}
+
+.artworkContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    grid-column: 0 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.artDescContainer {
+    box-sizing: border-box;
+    padding: 5rem;
+    grid-column: 1 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+

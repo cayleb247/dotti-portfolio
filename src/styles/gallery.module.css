@@ -15,8 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    border-bottom: 0.125rem solid #a05262;
+    width: 25%;
+    border-bottom: 0.125rem solid #a0526282;
 }
 
 .selectedWorks {
