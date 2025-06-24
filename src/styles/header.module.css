@@ -34,3 +34,7 @@
 .headerContainer.scrolled {
     background-color: rgb(255 255 255 / 55%);
 }
+
+.headerLink {
+    text-decoration: none;
+}

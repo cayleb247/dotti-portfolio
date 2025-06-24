@@ -2,6 +2,7 @@
 
 import styles from "@/styles/header.module.css";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import clsx from "clsx";
 
 export default function Header() {
@@ -27,10 +28,10 @@ export default function Header() {
           : styles.headerContainer
       )}
     >
-      <h3>Dotti Dorlini</h3>
+      <Link className={styles.headerLink} href={"/"}><h3>Dotti Dorlini</h3></Link>
       <ul>
-        <li>Gallery</li>
-        <li>About</li>
+        <Link className={styles.headerLink} href={"/gallery"}><li>Gallery</li></Link>
+        <Link className={styles.headerLink} href={"/about"}><li>About</li></Link>
       </ul>
     </header>
   );
