@@ -40,7 +40,9 @@ export default function Home() {
       <div className={styles.selectedWorksContainer}>
         <h1>Selected Works</h1>
         <div className={styles.selectedWorks}>
-          <Artwork art_id="color_pencil_marble"></Artwork>
+          <div className={styles.outerArtwork}>
+            <Artwork art_id="color_pencil_marble"></Artwork>
+          </div>
           <div className={styles.selectedWorksColumn}>
             <Artwork art_id="cutest_pup"></Artwork>
             <Artwork art_id="self_portrait"></Artwork>
@@ -49,7 +51,9 @@ export default function Home() {
             <Artwork art_id="figure_drawing"></Artwork>
             <Artwork art_id="mentos"></Artwork>
           </div>
-          <Artwork art_id="open_wrapped"></Artwork>
+          <div className={styles.outerArtwork}>
+            <Artwork art_id="open_wrapped"></Artwork>
+          </div>
         </div>
         <p
           className={styles.galleryButton}
