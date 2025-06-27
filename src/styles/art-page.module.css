@@ -1,55 +1,99 @@
 .notFoundContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #EBC7C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebc7c7;
 }
 
 .artPageContainer {
-    display: grid;
-    grid-template-columns: 5fr 6fr;
-    width: 100vw;
-    height: 100vh;
-    background-color: #EBC7C7;
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebc7c7;
 }
 
 .artworkContainer {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    grid-column: 0 1;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  grid-column: 1 / 2;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 3rem;
 }
 
 .artworkBorder {
-    height: 33%;
-    position: absolute;
-    right: 0;
-    width: 0.125rem;
-    background-color: #a0526282;
+  height: 33%;
+  position: absolute;
+  left: 0;
+  width: 0.125rem;
+  background-color: #a0526282;
 }
 
 .artDescContainer {
-    box-sizing: border-box;
-    padding: 5rem;
-    grid-column: 1 2;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  grid-column: 2 / 3;
+  box-sizing: border-box;
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
 }
 
 .artDescContainer h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .artDescContainer p {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .artPageContainer {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7fr 5fr;
+  }
+  .artworkContainer {
+    width: 100vw;
+    grid-column: auto;
+    grid-row: 1 / 2;
+    padding: 5rem 3rem 2rem 3rem;
+  }
+
+  .artworkBorder {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    height: 0.125rem;
+    background-color: #a0526282;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .artDescContainer {
+    width: 100vw;
+    padding: 1rem;
+    grid-column: auto;
+    grid-row: 2 / 3;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .artDescContainer > h1,
+  .artDescContainer > h3,
+  .artDescContainer > p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }

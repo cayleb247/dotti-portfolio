@@ -11,9 +11,9 @@ export default async function ArtPage({ params }: { params: Promise<{ art_id: st
         <div className={styles.artPageContainer}>
           <div className={styles.artworkContainer}>
             <Artwork art_id={art_id} profile={true} ></Artwork>
-            <div className={styles.artworkBorder}></div>
           </div>
           <div className={styles.artDescContainer}>
+            <div className={styles.artworkBorder}></div>
             <h1>{artData.title}</h1>
             <h3>{artData.year}</h3>
             <p>{artData.description}</p>
