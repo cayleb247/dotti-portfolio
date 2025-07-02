@@ -12,8 +12,8 @@ class ArtData {
         this.description = description;
         this.width = width;
         this.height = height;
-        this.profileWidth = width * 1.5
-        this.profileHeight = height * 1.5;
+        this.profileWidth = width * 1.50;
+        this.profileHeight = height * 1.50;
     }
     
 }

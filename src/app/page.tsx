@@ -40,18 +40,18 @@ export default function Home() {
       <div className={styles.selectedWorksContainer}>
         <h1>Selected Works</h1>
         <div className={styles.selectedWorks}>
-          <div className={styles.outerArtwork}>
+          <div className={`${styles.outerArtwork} ${styles.left}`}>
             <Artwork art_id="color_pencil_marble"></Artwork>
           </div>
-          <div className={styles.selectedWorksColumn}>
+          <div className={`${styles.selectedWorksColumn} ${styles.left}`}>
             <Artwork art_id="cutest_pup"></Artwork>
             <Artwork art_id="self_portrait"></Artwork>
           </div>
-          <div className={styles.selectedWorksColumn}>
+          <div className={`${styles.selectedWorksColumn} ${styles.right}`}>
             <Artwork art_id="figure_drawing"></Artwork>
             <Artwork art_id="mentos"></Artwork>
           </div>
-          <div className={styles.outerArtwork}>
+          <div className={`${styles.outerArtwork} ${styles.right}`}>
             <Artwork art_id="open_wrapped"></Artwork>
           </div>
         </div>

@@ -1,81 +1,100 @@
 .galleryContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    background-color: #EBC7C7;
-    box-sizing: border-box;
-    padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #ebc7c7;
+  box-sizing: border-box;
+  padding-top: 4rem;
 }
 
 .galleryContainer h1 {
-    box-sizing: border-box;
-    padding-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33%;
-    border-bottom: 0.125rem solid #a0526282;
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  border-bottom: 0.125rem solid #a0526282;
 }
 
 .selectedWorks {
-    box-sizing: border-box;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .selectedWorksColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .columnRight {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .columnLeft {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .selectedWorksRow {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .worksColumnsRow {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.galleryMobile {
+  display: none;
+}
+
+.hiddenArtText {
+    display: none;
+}
+
+@media (max-width: 930px) {
+  .worksColumnsRow {
+    flex-direction: column;
+  }
+  .selectedWorksColumn {
     display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-}
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
-@media (max-width: 1220px) {
-    .outerArtwork {
-        display: none;
-    }
-}
+  .columnRight {
+    align-items: center;
+  }
 
-@media (max-width: 640px) {
-    .selectedWorks {
-        flex-direction: column;
-    }
-    .selectedWorksColumn {
-        gap: 0.5rem;
-    }
-}
+  .columnLeft {
+    align-items: center;
+  }
+  .selectedWorksRow {
+    flex-direction: column;
+  }
 
-@media (max-width: 320px) {
-    .selectedWorksContainer {
-        padding: none;
-    }
-    .selectedWorks {
-        padding: none;
-        max-width: 100vw;
-    }
+}
+@media (max-width: 350px) {
+  .horizontalArtworks {
+    display: none;
+  }
+  .hiddenArtText {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 1rem 1rem 1rem;
+  }
 }

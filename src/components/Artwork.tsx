@@ -10,24 +10,53 @@ interface ArtworkProps {
   profile?: boolean;
 }
 
-export default function Artwork({ art_id , profile }: ArtworkProps) {
+export default function Artwork({ art_id, profile }: ArtworkProps) {
   const router = useRouter();
 
   function handleClick() {
-    router.push(`/gallery/${art_id}`)
+    router.push(`/gallery/${art_id}`);
   }
 
-  return (
+  const imgWidth = profile
+    ? artDataMap.get(art_id).profileWidth
+    : artDataMap.get(art_id).width;
+  const imgHeight = profile
+    ? artDataMap.get(art_id).profileHeight
+    : artDataMap.get(art_id).height;
+
+  if (profile) {
+    return (
     <>
-    <div className={styles.artwork} onClick={handleClick}>
-      <Image
-        src={`/artworks/${art_id}.jpg`}
-        alt={artDataMap.get(art_id).title}
-        width={profile ? artDataMap.get(art_id).profileWidth : artDataMap.get(art_id).width}
-        height={profile ? artDataMap.get(art_id).profileHeight : artDataMap.get(art_id).height}
-      ></Image>
+    <div className={styles.artwork} onClick={handleClick} style={{ width: "100%", maxWidth: imgWidth }}>
+      <div style={{ aspectRatio: `${imgWidth} / ${imgHeight}`, width: "100%", position: 'relative' }}>
+        <Image
+          src={`/artworks/${art_id}.jpg`}
+          alt={artDataMap.get(art_id).title}
+          fill
+          
+        ></Image>
+      </div>
       {!profile && <p>&quot;{artDataMap.get(art_id).title}&quot;</p>}
     </div>
     </>
   );
+  } else {
+    return (
+      <>
+        <div
+          className={styles.artwork}
+          onClick={handleClick}
+        >
+          <div style={{ width: imgWidth, height: imgHeight, position: 'relative' }}>
+            <Image
+              src={`/artworks/${art_id}.jpg`}
+              alt={artDataMap.get(art_id).title}
+              fill
+            ></Image>
+          </div>
+          {!profile && <p>&quot;{artDataMap.get(art_id).title}&quot;</p>}
+        </div>
+      </>
+    );
+  }
 }
